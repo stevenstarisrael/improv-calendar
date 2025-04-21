@@ -46,20 +46,40 @@ function togglePopup() {
 }
 
 let wordList = [];
-const randomWordContainer = document.getElementById("randomWordButton");
+let wordDataLoaded = false;
 
 async function fetchWordList() {
+    const button = document.getElementById("randomWordButton");
+    button.innerText = "Please wait...";
+    button.disabled = true;
+    button.style.opacity = 0.6;
+    button.style.cursor = "not-allowed";
+
     const response = await fetch('https://opensheet.vercel.app/1CC7IeHDrI4dgV1Qnx0sdHdCWo4YVZCkx1VvBva3r8GE/ImprovWords');
     const data = await response.json();
 
     wordList = data.map(item => ({
         word: item.Word,
-        desc: item.Description
+        desc: item.Description && item.Description.trim() !== '' ? item.Description : ''
     }));
+    wordDataLoaded = true;
+    showRandomWord();
+
+    // Enable the button after loading
+    button.innerText = "Show Me A Random Word";
+    button.disabled = false;
+    button.style.opacity = 1;
+    button.style.cursor = "pointer";
+
     randomWordContainer.style.display = "block";
 }
 
 function showRandomWord() {
+    if (!wordDataLoaded) {
+        fetchWordList();
+        return;
+    }
+
     generateWord();
     document.getElementById("wordPopup").style.display = "flex";
 }
@@ -77,6 +97,5 @@ function closeWordPopup() {
 // ✅ Load both datasets when page loads
 window.onload = async () => {
     await fetchIframesList();
-    await fetchWordList();
 };
 {/* </script> */ }
