@@ -41,16 +41,16 @@
             Improv Sweden Calendar
         </div>
         <div class="cta-buttons">
-            <button id="randomWordButton" onclick="showRandomWord()" style="background-color:#4f46e5;">Show Me
-                A Random Word</button>
-            <button onclick="togglePopup()" style="background-color:#0d9488">Add Event</button>
+            <button id="randomWordButton" onclick="showRandomWord()" style="background-color:#4f46e5;">Ge mig ett
+                slumpmässigt ord</button>
+            <button onclick="togglePopup()" style="background-color:#0d9488">Lägg till en show</button>
         </div>
     </nav>
 
     <div class="container">
         <div id="dropdown" class="dropdown" style="display: none;">
             <select id="citySelect" onchange="updateCalendar()">
-                <option value="">-- Select a city --</option>
+                <option value="">-- Välj en stad --</option>
             </select>
         </div>
 
@@ -63,7 +63,18 @@
     </div>
 
     <div class="footer">
-        Contact: hello@improvcalendar.se | © 2025 Improv Sweden
+        <footer style="text-align: center; font-size: 0.9rem; color: #999;">
+            <hr style="margin-bottom: 1rem;">
+            <nav>
+                <a href="index.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666; font-weight: bold;">Hem</a>
+                <a href="terms-user.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666;">Användarvillkor</a>
+                <a href="terms.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Användarregler</a>
+                <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #666;">About</a>
+            </nav>
+            <!-- <p style="margin-top: 1rem;">&copy; 2025 YourSiteName. All rights reserved.</p> -->
+        </footer>
     </div>
 
     <div id="popup" onclick="togglePopup()">
@@ -73,7 +84,7 @@
         <div class="word-box" onclick="event.stopPropagation()">
             <h2 id="randomWord">Word</h2>
             <p id="wordDesc">Description of the word.</p>
-            <button onclick="generateWord()">Another One</button>
+            <button onclick="generateWord()">En till</button>
         </div>
     </div>
 

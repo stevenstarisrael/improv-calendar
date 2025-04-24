@@ -50,7 +50,7 @@ let wordDataLoaded = false;
 
 async function fetchWordList() {
     const button = document.getElementById("randomWordButton");
-    button.innerText = "Please wait...";
+    button.innerText = "Vänta...";
     button.disabled = true;
     button.style.opacity = 0.6;
     button.style.cursor = "not-allowed";
@@ -66,7 +66,7 @@ async function fetchWordList() {
     showRandomWord();
 
     // Enable the button after loading
-    button.innerText = "Show Me A Random Word";
+    button.innerText = "Ge mig ett slumpmässigt ord";
     button.disabled = false;
     button.style.opacity = 1;
     button.style.cursor = "pointer";

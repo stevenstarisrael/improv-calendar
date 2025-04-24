@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore improv shows in Sweden. View events by city, add your own, and get inspired.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Om Improkalendern - Improv Sweden Calendar">
+    <meta property="og:description" content="Regler för att posta evenemang på Improv Sweden Calendar">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- Replace with your actual URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Improv Sweden Calendar">
+    <meta name="twitter:description" content="Discover improv shows across Sweden with ease.">
+    <meta name="twitter:image" content="logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+
+    <!-- Title -->
+    <title>Om Improkalendern - Improv Sweden Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Improv Sweden Logo"
+                    style="height: 40px; width: 40px; border-radius: 9999px; margin-right: 0.5rem; vertical-align: middle;">
+                Improv Sweden Calendar
+            </div>
+        </a>
+        <div class="cta-buttons">
+            <button id="randomWordButton" onclick="showRandomWord()" style="background-color:#4f46e5;">Ge mig ett
+                slumpmässigt ord</button>
+            <button onclick="togglePopup()" style="background-color:#0d9488">Lägg till en show</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Improkalendern</h1>
+        <p>
+            En användbar resurs för att upptäcka impro runt om i Sverige. Oavsett om du letar efter föreställningar,
+            jams, workshops eller bara vill ta del av improscenen i Sverige, är den här kalendern till för att göra det
+            enklare att hitta evenemang.
+        </p>
+
+        <h2>Varför kalendern finns</h2>
+        <p>
+            Sveriges improscen är full av möjligheter, men tidigare har det varit rörigt att hitta rätt – man har behövt
+            hoppa mellan olika plattformar, scrolla genom sociala medier, kolla flera sajter, hålla koll på
+            WhatsApp-grupper eller lita på djungeltelegrafen.
+        </p>
+        <p>
+            Den här kalendern löser det. Genom att samla allt på ett ställe kan du lägga mindre tid på att leta och mer
+            tid av att njuta av impro.
+        </p>
+
+        <h2>Så funkar det</h2>
+        <p>
+            Evenemang läggs till av dem som arrangerar dem, eller av folk som bara vill sprida ordet. Det är ett
+            gemensamt initiativ för att hålla kalendern så aktuell och användbar som möjligt. Känner du till ett
+            evenemang som saknas? Lägg gärna till det själv!
+        </p>
+
+        <h2>Teamet bakom</h2>
+        <p>
+            <strong><a href="https://www.hjalmarhardestam.se/" target="_blank">Hjalmar Hardestam</a></strong><br />
+            Sidan drivs och underhålls av Hjalmar Hardestam. Jag mötte Diana Ionita på en impro-festival – hon hade
+            skapat en sån här kalender för Londons improcommunity på <a href="https://improv-calendar.co.uk/"
+                target="_blank">improv-calendar.co.uk</a>. Jag tyckte det var drêtbra, så jag ordnade en för oss i
+            Sverige också.<br />
+            Säg hej om vi ses!
+        </p>
+
+        <p>
+            Har du feedback eller bara vill säga hej? Skicka gärna ett mejl till: <a
+                href="mailto:hjalmarhardestam@gmail.com">hjalmarhardestam@gmail.com</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        <footer style="text-align: center; font-size: 0.9rem; color: #999;">
+            <hr style="margin-bottom: 1rem;">
+            <nav>
+                <a href="index.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Hem</a>
+                <a href="terms-user.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666;">Användarvillkor</a>
+                <a href="terms.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Användarregler</a>
+                <a href="about.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666; font-weight: bold;">About</a>
+            </nav>
+            <!-- <p style="margin-top: 1rem;">&copy; 2025 YourSiteName. All rights reserved.</p> -->
+        </footer>
+    </div>
+
+    <div id="popup" onclick="togglePopup()">
+        <iframe src="https://airtable.com/embed/appW0McLlByaH5C0D/shr8vMU9qYf616niE"></iframe>
+    </div>
+    <div id="wordPopup" onclick="closeWordPopup()">
+        <div class="word-box" onclick="event.stopPropagation()">
+            <h2 id="randomWord">Word</h2>
+            <p id="wordDesc">Description of the word.</p>
+            <button onclick="generateWord()">En till</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore improv shows in Sweden. View events by city, add your own, and get inspired.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Användarregler - Improv Sweden Calendar">
+    <meta property="og:description" content="Regler för att posta evenemang på Improv Sweden Calendar">
+    <meta property="og:image" content="logo.jpg">
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- Replace with your actual URL -->
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Improv Sweden Calendar">
+    <meta name="twitter:description" content="Discover improv shows across Sweden with ease.">
+    <meta name="twitter:image" content="logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+
+    <!-- Title -->
+    <title>Användarregler - Improv Sweden Calendar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Improv Sweden Logo"
+                    style="height: 40px; width: 40px; border-radius: 9999px; margin-right: 0.5rem; vertical-align: middle;">
+                Improv Sweden Calendar
+            </div>
+        </a>
+        <div class="cta-buttons">
+            <button id="randomWordButton" onclick="showRandomWord()" style="background-color:#4f46e5;">Ge mig ett
+                slumpmässigt ord</button>
+            <button onclick="togglePopup()" style="background-color:#0d9488">Lägg till en show</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Användarregler</h1>
+        <p>Välkommen till våra evenemangsregler. Se till att ditt evenemang följer dessa riktlinjer för att undvika att
+            det tas bort.<br>
+            Syftet med dessa regler är att upprätthålla kvaliteten och trovärdigheten på sajten, samt säkerställa att
+            alla evenemang är relevanta och passande för vårt community.</p>
+
+        <h2>1. Krav för att få lägga upp evenemang</h2>
+        <ul>
+            <li>1.1. Evenemanget måste vara offentligt, verkligt och hållas på en fysisk plats.</li>
+            <li>1.2. Evenemanget måste äga rum i Sverige.</li>
+            <li>1.3. Evenemanget måste tillhöra någon av följande kategorier:
+                <ul>
+                    <li>Improföreställningar: Måste innehålla minst ett inslag av improvisation.</li>
+                    <li>Jams: Måste inkludera improvisationsaktiviteter.</li>
+                    <li>Workshops: Måste ha fokus på improvisation eller närliggande ämnen, t.ex. skådespelarkurser med
+                        tydlig koppling till impro.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>2. Regler för evenemangslänkar</h2>
+        <ul>
+            <li>2.1. Länken till evenemanget måste gå direkt till en sida som specifikt handlar om evenemanget och
+                innehåller relevant information (biljetter, tid, plats, etc).</li>
+            <li>2.2. Endast direkta länkar är tillåtna. Mellanled som sociala medier är inte tillåtna.</li>
+            <li>2.3. Informationen på vår sajt måste stämma överens med den på den angivna länken. Avvikelser kan leda
+                till att evenemanget tas bort.</li>
+            <li>2.4. Länkar måste fungera fram till att evenemanget äger rum.</li>
+        </ul>
+
+        <h2>3. Information om evenemanget</h2>
+        <ul>
+            <li>3.1. Beskrivningen ska tydligt ange vilken typ av evenemang det är, hur länge det pågår, samt eventuella
+                särskilda krav (t.ex. åldersgräns eller tidigare erfarenhet).</li>
+            <li>3.2. Dubbletter tillåts inte. En dubblett är ett evenemang med samma datum, tid och plats. Om samma
+                evenemang återkommer vid ett annat tillfälle är det inte en dubblett.</li>
+            <li>3.3. Datum, start- och sluttider måste vara korrekta.</li>
+        </ul>
+
+        <h2>4. Innehållsstandard</h2>
+        <ul>
+            <li>4.1. Evenemang får inte främja hat, diskriminering eller våld mot någon individ eller grupp.</li>
+            <li>4.2. Beskrivningar får inte innehålla alltför explicit innehåll.</li>
+            <li>4.3. Evenemang ska spegla värderingarna inom impro- och kreativa sammanhang: inkludering, kreativitet
+                och respekt.</li>
+        </ul>
+
+        <h2>5. Riktlinjer för att skicka in evenemang</h2>
+        <ul>
+            <li>5.1. Alla inskickade evenemang kan komma att granskas av sajtens team.</li>
+            <li>5.2. Om information om evenemanget ändras är det inskickarens ansvar att uppdatera informationen.</li>
+        </ul>
+
+        <h2>6. Tillämpning av regler</h2>
+        <ul>
+            <li>6.1. Evenemang som bryter mot reglerna kan tas bort utan förvarning. Upprepade överträdelser kan leda
+                till att man inte får lägga upp framtida evenemang.</li>
+            <li>6.2. Användare kan rapportera evenemang som de anser bryter mot reglerna.</li>
+            <li>6.3. Sajtägaren förbehåller sig rätten att fatta slutgiltiga beslut om vilka evenemang som får
+                publiceras, även i fall som inte specifikt nämns i dessa regler.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <footer style="text-align: center; font-size: 0.9rem; color: #999;">
+            <hr style="margin-bottom: 1rem;">
+            <nav>
+                <a href="index.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Hem</a>
+                <a href="terms-user.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666;">Användarvillkor</a>
+                <a href="terms.html"
+                    style="margin: 0 1rem; text-decoration: none; color: #666; font-weight: bold;">Användarregler</a>
+                <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #666;">About</a>
+            </nav>
+            <!-- <p style="margin-top: 1rem;">&copy; 2025 YourSiteName. All rights reserved.</p> -->
+        </footer>
+    </div>
+
+    <div id="popup" onclick="togglePopup()">
+        <iframe src="https://airtable.com/embed/appW0McLlByaH5C0D/shr8vMU9qYf616niE"></iframe>
+    </div>
+    <div id="wordPopup" onclick="closeWordPopup()">
+        <div class="word-box" onclick="event.stopPropagation()">
+            <h2 id="randomWord">Word</h2>
+            <p id="wordDesc">Description of the word.</p>
+            <button onclick="generateWord()">En till</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
