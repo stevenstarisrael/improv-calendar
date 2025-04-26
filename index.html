@@ -27,6 +27,7 @@
     <!-- Title -->
     <title>Improkalendern</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Styling -->
     <link rel="stylesheet" href="style.css">
@@ -48,10 +49,36 @@
     </nav>
 
     <div class="container">
-        <div id="dropdown" class="dropdown" style="display: none;">
+        <div id="dropdowns" class="dropdowns" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+            <!-- City Dropdown -->
             <select id="citySelect" onchange="updateCalendar()">
                 <option value="">-- Välj en stad --</option>
             </select>
+
+            <!-- Type Dropdown -->
+            <!-- <select id="typeSelect" onchange="">
+                <option value="">-- Välj typ --</option>
+                <option value="Improföreställning">Improföreställning</option>
+                <option value="Jam">Jam</option>
+                <option value="Workshop">Workshop</option>
+            </select> -->
+
+            <!-- Month Dropdown -->
+            <!-- <select id="monthSelect" onchange="">
+                <option value="">-- Välj månad --</option>
+                <option value="01">Januari</option>
+                <option value="02">Februari</option>
+                <option value="03">Mars</option>
+                <option value="04">April</option>
+                <option value="05">Maj</option>
+                <option value="06">Juni</option>
+                <option value="07">Juli</option>
+                <option value="08">Augusti</option>
+                <option value="09">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select> -->
         </div>
 
         <div>
@@ -72,6 +99,10 @@
                     style="margin: 0 1rem; text-decoration: none; color: #666;">Användarvillkor</a>
                 <a href="terms.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Användarregler</a>
                 <a href="about.html" style="margin: 0 1rem; text-decoration: none; color: #666;">Om</a>
+                <a href="https://www.instagram.com/improkalendern" target="_blank"
+                    style="margin-left: 1rem; color: #666; font-size: 20px;">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </nav>
             <!-- <p style="margin-top: 1rem;">&copy; 2025 YourSiteName. All rights reserved.</p> -->
         </footer>
